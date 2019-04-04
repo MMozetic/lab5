@@ -277,7 +277,7 @@ begin
       Bus2IP_Addr                    => ipif_Bus2IP_Addr,
       Bus2IP_RNW                     => ipif_Bus2IP_RNW,
       Bus2IP_BE                      => ipif_Bus2IP_BE,
-      Bus2IP_CS                      => ipif_Bus2IP_CS,
+      Bus2IP_CS                      => open,
       Bus2IP_RdCE                    => ipif_Bus2IP_RdCE,
       Bus2IP_WrCE                    => ipif_Bus2IP_WrCE,
       Bus2IP_Data                    => ipif_Bus2IP_Data,
