@@ -48,6 +48,7 @@ int main()
 {
     init_platform();
     unsigned char string_s[] = "LPRS 2\n";
+    unsigned int offset = 0, clock = 0, ind = 0;
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -71,11 +72,32 @@ int main()
 
 
     //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_circle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     set_cursor(350);
-    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
-    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 40, 'A');
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+	print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 40, 'A');
 
+    for(;;){
+    	draw_circle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+offset*4);
+    	if(clock==50){
+    		if(offset==17){
+    			ind = 1;
+			}
+
+    		if(offset == 0){
+				ind = 0;
+			}
+
+			if(ind){
+				offset--;
+			}else{
+				offset++;
+			}
+
+    		clock = 0;
+    	}else{
+    		clock++;
+    	}
+    }
 
     return 0;
 }
