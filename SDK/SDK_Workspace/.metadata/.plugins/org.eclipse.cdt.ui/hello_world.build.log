@@ -1,8 +1,10 @@
-09:47:38 **** Auto Build of configuration Debug for project hello_world ****
+09:51:06 **** Auto Build of configuration Debug for project hello_world ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:52:13: warning: unused variable 'value1' [-Wunused-variable]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: hello_world.elf'
@@ -30,5 +32,5 @@ elfcheck passed.
 'Finished building: hello_world.elf.elfcheck'
 ' '
 
-09:47:40 Build Finished (took 1s.320ms)
+09:51:07 Build Finished (took 1s.477ms)
 

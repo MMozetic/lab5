@@ -1764,3 +1764,55 @@ Xilinx Software Development Kit
 Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Done!
+Writing filter settings....
+Done writing filter settings to:
+	D:\ra207-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\ra207-2016\lab5\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Thu Apr 18 09:05:26 2019
+ make -f system.make exporttosdk started...
+make: Ništa za napraviti za `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Thu Apr 18 09:05:27 2019
+ xsdk.exe -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	D:\ra207-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\ra207-2016\lab5\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Thu Apr 18 09:16:33 2019
+ make -f system.make exporttosdk started...
+make: Ništa za napraviti za `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Thu Apr 18 09:16:33 2019
+ xsdk.exe -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Overriding Xilinx file <TextEditor.cfg> with local file <C:/Xilinx/14.6/ISE_DS/EDK/data/TextEditor.cfg>
+Writing filter settings....
+Done writing filter settings to:
+	D:\ra207-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\ra207-2016\lab5\etc\system.gui

@@ -171,3 +171,44 @@
 09:08:35.438 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 09:09:32.880 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 09:10:16.332 INFO  - Processing command line option -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:10:29.045 INFO  - Processing command line option -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:10:32.059 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:11:39.123 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:12:51.835 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:14:00.719 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:14:44.202 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:15:55.366 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:16:19.704 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:20:10.185 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:20:31.615 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:21:14.933 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:22:33.296 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:24:46.477 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:26:21.414 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:28:10.434 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:29:06.068 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:31:02.782 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:31:35.712 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:31:59.140 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:32:13.409 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:33:46.515 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:34:23.338 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:36:47.328 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:37:35.593 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:38:48.552 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:40:31.570 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:41:26.499 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:42:07.908 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:44:39.577 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:45:09.301 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:46:00.010 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:47:31.934 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:47:49.939 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:19:52.250 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:48:15.738 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:06:06.108 INFO  - Processing command line option -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:06:25.082 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:12:52.618 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:16:38.232 INFO  - Processing command line option -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml. 
