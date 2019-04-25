@@ -40,16 +40,45 @@
 #include "xparameters.h"
 #include "xio.h"
 #include "vga_periph_mem.h"
+#include "xintc.h"
+#include "xil_exception.h"
 
+XIntc Intc;
+unsigned int offset = 0, clock = 0, ind = 0;
 
 void print(char *str);
+
+void my_timer_interrupt_handler(void * baseaddr_p) {
+	draw_circle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+offset*4);
+	    	if(clock==50){
+	    		if(offset==17){
+	    			ind = 1;
+				}
+
+	    		if(offset == 0){
+					ind = 0;
+				}
+
+				if(ind){
+					offset--;
+				}else{
+					offset++;
+				}
+
+	    		clock = 0;
+	    	}else{
+	    		clock++;
+	    	}
+}
 
 int main()
 {
     init_platform();
     unsigned char string_s[] = "LPRS 2\n";
-    unsigned int offset = 0, clock = 0, ind = 0;
-    Xuint32 value1;
+    XStatus Status;
+    Xuint32 value1, value2, value3;
+
+    xil_printf("Interrupt example\n\r");
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -65,7 +94,15 @@ int main()
     set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0x000000);
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xFF0000);// frame color      6
 
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x2C, 0x0001DF);// terminal count      7
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x30, 0x000001);// enable      8
+
+
+
     print("Hello World\n\r");
+
+    value1 = XIo_In32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x2C);
+    xil_printf("\n\rvalue1 = %x.", value1);
 
     //clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
@@ -77,28 +114,28 @@ int main()
 	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
 	print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 40, 'A');
 
+
+	Status = XIntc_Initialize (&Intc, XPAR_INTC_0_DEVICE_ID);
+	 if (Status != XST_SUCCESS) xil_printf ("\r\nInterrupt controller initialization failure");
+	 else xil_printf("\r\nInterrupt controller initialized");
+
+	 microblaze_enable_interrupts();
+
     for(;;){
-    	draw_circle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+offset*4);
-    	if(clock==50){
-    		if(offset==17){
-    			ind = 1;
-			}
+    	// Connect my_timer_interrupt_handler
+    		 Status = XIntc_Connect (&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR,
+    				 (XInterruptHandler) my_timer_interrupt_handler,(void *)XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x2C);
 
-    		if(offset == 0){
-				ind = 0;
-			}
 
-			if(ind){
-				offset--;
-			}else{
-				offset++;
-			}
-
-    		clock = 0;
-    	}else{
-    		clock++;
-    	}
+    		 if (Status != XST_SUCCESS) xil_printf ("\r\nRegistering MY_TIMER Interrupt Failed");
+    		  else xil_printf("\r\nMY_TIMER Interrupt registered");
+    		  //start the interrupt controller in real mode
+    		  Status = XIntc_Start(&Intc, XIN_REAL_MODE);
+    		  //enable interrupt controller
+    		  XIntc_Enable (&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR);
     }
+
+    cleanup_platform();
 
     return 0;
 }
