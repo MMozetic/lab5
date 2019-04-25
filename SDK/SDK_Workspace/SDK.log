@@ -212,3 +212,8 @@
 09:06:25.082 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 09:12:52.618 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 09:16:38.232 INFO  - Processing command line option -hwspec D:\ra207-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:49:42.257 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:50:34.459 INFO  - FPGA configured successfully with bitstream "D:/ra207-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:21:10.315 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:51:22.871 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
